@@ -4,7 +4,7 @@ COPY package*.json .
 RUN npm ci
 COPY . .
 RUN npx prisma generate
-ENV PUBLIC_API_BASE_URL=
+ENV PUBLIC_API_BASE_URL=https://beta.kazwire.com
 RUN npm run build
 RUN npm prune --production
 
